@@ -96,7 +96,8 @@ python3 main.py
 ### Kết quả
 
 ![result preview](https://raw.githubusercontent.com/Huythanh0x/crawl_uit_data/master/images/result_preview.png)
-Sau khi kết quả thì ta thu được file `datasbase/database_uit.db`, bạn có thể tải file [tại đây](https://raw.githubusercontent.com/Huythanh0x/crawl_uit_data/master/datasbase/database_uit.db). Bạn có thể sử dụng công cụ [DB Browser for SQLite](https://sqlitebrowser.org/) mình để cập phía trên để truy vấn dữ liệu.
+Sau khi kết quả thì ta thu được file `datasbase/database_uit.db`, bạn có thể tải file [tại đây](https://raw.githubusercontent.com/Huythanh0x/crawl_uit_data/master/database/database_uit.db). Bạn có thể sử dụng công cụ [DB Browser for SQLite]
+(https://sqlitebrowser.org/) mình để cập phía trên để truy vấn dữ liệu.
 
 Mình cũng có chuẩn bị một số câu lệnh SQL để truy vấn trong file `sql_query/sql.txt`.
 
