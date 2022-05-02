@@ -79,27 +79,34 @@ Ta có mối quan hệ giũa course và user là quan hệ **n:n** vì vậy ta 
 Khi đã hiểu được cách hoạt động của `beatutifulSoup` ta có thể dễ dàng áp dụng với từng url của user hoặc course phía trên.
 
 Nhưng để có HTML để trích xuất thì ta cần đăng nhập vào trang web trước. Selenium đã đến đây. Dưới đây là cách khai báo `selenium` cũng như cách giả lập tao tác nhập bàn phím và click chuột để đăng nhập.
-<script src="https://gist.github.com/Huythanh0x/e0d0069216296bb13a9f67f2d1dd4532.js"></script>
+
+<https://gist.github.com/Huythanh0x/e0d0069216296bb13a9f67f2d1dd4532>
+
 Trong thời gian tới mình sẽ viết bài viết hướng dẫn sử dụng `selenium` chi tiết hơn.
 
 Sau khi đã lấy được dữ liệu cũng như trích xuất thành công thì việc tiếp theo là lưu trữ các dữ liệu này vào cơ sở dữ liệu. Dưới đây là đoạn code tạo cơ sở dữ liệu và chèn dữ liệu vào cơ sở dữ liệu dựa vào dữ liệu được trích xuất phía trên.
-<script src="https://gist.github.com/Huythanh0x/149338996ef9607a73ceec2c7775afaa.js"></script>
+
+<https://gist.github.com/Huythanh0x/149338996ef9607a73ceec2c7775afaa>
 
 Bạn có thể đọc tài liệu hướng dẫn sử dụng `SQLite` trong Python [tại đây](https://docs.python.org/3/library/sqlite3.html).
 ### Tự chạy code
+
 Bạn có thể cập nhập dữ liệu mới bằng cách clone Github repository [tại đây]() và tử chạy code.
 Trước khi chạy code bạn cần thay đổi **USER_NAME** và **PASSWORD** trong file `main.py`.
 Để chạy code bạn gọi lệnh:
+
 ```
 python3 main.py
 ```
+
 ### Kết quả
 
 ![result preview](https://raw.githubusercontent.com/Huythanh0x/crawl_uit_data/master/images/result_preview.png)
-Sau khi kết quả thì ta thu được file `datasbase/database_uit.db`, bạn có thể tải file [tại đây](https://raw.githubusercontent.com/Huythanh0x/crawl_uit_data/master/datasbase/database_uit.db). Bạn có thể sử dụng công cụ [DB Browser for SQLite](https://sqlitebrowser.org/) mình để cập phía trên để truy vấn dữ liệu.
 
+Sau khi kết quả thì ta thu được file `datasbase/database_uit.db`, bạn có thể tải file [tại đây](https://raw.githubusercontent.com/Huythanh0x/crawl_uit_data/master/database/database_uit.db). Bạn có thể sử dụng công cụ [DB Browser for SQLite](https://sqlitebrowser.org/) mình để cập phía trên để truy vấn dữ liệu.
 Mình cũng có chuẩn bị một số câu lệnh SQL để truy vấn trong file `sql_query/sql.txt`.
 
 ### Tổng kết
 Và trên đây mình đã hướng dẫn bạn crawl dữ liệu môn học và dữ liệu sinh viên của UIT bằng cách sử dụng Selenium và BeatutifulSoup cũng như sử dụng SQLite để lưu trữ kết quả.
+
 Bạn có thể làm gì với đống dữ liệu này? Như mình đã nói phía trên thì bạn có thể sử dụng để xem thông tin của các sinh viên khác ví dụ như tên, email, ảnh, số lượng môn học, các môn học mà giảng viên đã dạy, các môn học nào có tỉ lệ học lại lớn, môn học nào chỉ xuất hiện 2 kỳ 1 lần để bạn đăng ký môn học cho thuận tiện...
