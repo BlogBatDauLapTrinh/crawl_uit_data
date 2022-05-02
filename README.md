@@ -25,7 +25,7 @@ https://courses.uit.edu.vn/user/profile.php?id=xxx
 ```
 Trong đó xxx là index của sinh viên, ví dụ index của mình là 1276 thì ta có link là <https://courses.uit.edu.vn/user/profile.php?id=12762>.
 
-![my profile](images/user_profile_example.png)
+![my profile](https://raw.githubusercontent.com/Huythanh0x/crawl_uit_data/master/images/user_profile_example.png)
 
 Và ta có url của course(khóa học) AI của thầy Lương Ngọc Hoàng:
 
@@ -34,7 +34,7 @@ https://courses.uit.edu.vn/course/view.php?id=yyy
 ```
 Trong đó yyy là index của khóa học, ví dụ index của khóa học Trí tuệ nhân tạo của thầy Lương Ngọc Hoàng trong học kỳ 2 năm 2020-2021 là 7181 thì ta có link là <https://courses.uit.edu.vn/course/view.php?id=7181>
 
-![Luong Ngoc Hoang's course](images/course_example.png)
+![Luong Ngoc Hoang's course](https://raw.githubusercontent.com/Huythanh0x/crawl_uit_data/master/images/course_example.png)
 
 Sau khi đã xác định được url để lấy dữ liệu ta cần tìm kiếm giới hạn của index trải dài từ đâu đến đâu. Sau một lúc thử bằng phương pháp Binary Search thì mình thấy được `index của user cuối` là **17663** và `index của khóa học cuối` là **9330**.
 
@@ -71,7 +71,7 @@ Một số nhận xét về các dữ liệu phía trên:
 Dựa vào các dữ liệu trên ta có thể xác định được rằng có 2 loại dữ liệu chính là **course** (khóa học)) và **user** (người dùng) gồm giảng viên và sinh viên.
 Ta có mối quan hệ giũa course và user là quan hệ **n:n** vì vậy ta cần tạo ra một bảng trung gian, mình đặt tên là **enroll**(tham gia). Bởi vì ta có **student**(sinh viên) và **instructor** (giảng viên) có một số điểm khác nhất đinh. Ví dụ sinh viên có mã sinh viên còn giảng viên thì không. Và sinh viên chỉ có 1 lớp(quan hệ **1:1**) học còn giảng viên thì có thể là cố vấn học tập của một hoặc nhiều lớp (quan hệ **1:n**).Bên cạnh đó thì ta cũng thường không truy vấn cả giảng viên và sinh viên cùng lúc, chính vì thế để đảm bảo tính nhất quán, ta sẽ tách bảng user thành student và instructor.
 
-![database schema](images/uit_table.png)
+![database schema](https://raw.githubusercontent.com/Huythanh0x/crawl_uit_data/master/images/uit_table.png)
 
 4. Tiến hành code 
 
@@ -95,8 +95,8 @@ python3 main.py
 ```
 ### Kết quả
 
-![result preview](images/result_preview.png)
-Sau khi kết quả thì ta thu được file `database/database_uit.db`, bạn có thể tải file [tại đây](database/database_uit.db). Bạn có thể sử dụng công cụ [DB Browser for SQLite](https://sqlitebrowser.org/) mình để cập phía trên để truy vấn dữ liệu.
+![result preview](https://raw.githubusercontent.com/Huythanh0x/crawl_uit_data/master/images/result_preview.png)
+Sau khi kết quả thì ta thu được file `datasbase/database_uit.db`, bạn có thể tải file [tại đây](https://raw.githubusercontent.com/Huythanh0x/crawl_uit_data/master/datasbase/database_uit.db). Bạn có thể sử dụng công cụ [DB Browser for SQLite](https://sqlitebrowser.org/) mình để cập phía trên để truy vấn dữ liệu.
 
 Mình cũng có chuẩn bị một số câu lệnh SQL để truy vấn trong file `sql_query/sql.txt`.
 
