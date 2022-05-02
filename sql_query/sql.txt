@@ -1,0 +1,28 @@
+###all subject of a student_table (given student_table code)
+SELECT course_table.name 
+FROM course_table,student_table,enroll_table
+WHERE course_table.id = enroll_table.course_id and student_table.id = enroll_table.user_id and student_table.code = '17521259' ORDER BY course_table.name;
+
+###check if subject was repeated given student_table code)
+SELECT course_table.name , count(*) duplicate
+FROM course_table,student_table,enroll_table
+WHERE course_table.id = enroll_table.course_id and student_table.id = enroll_table.user_id and student_table.code = '17520337'
+GROUP BY course_table.name
+having duplicate > 1;
+
+###count subject that a instrucor teached (given instructor's code)
+SELECT course_table.name , count(*) duplicate
+FROM course_table,instructor,enroll_table
+WHERE course_table.id = enroll_table.course_id and instructor.id = enroll_table.user_id and instructor.code = 'hoangln'
+GROUP BY course_table.name;
+
+
+###list all students in a class code
+SELECT student_table.email
+FROM course_table,student_table,enroll_table
+WHERE course_table.id = enroll_table.course_id and student_table.id = enroll_table.user_id and course_table.code like '%CS105%' and course_table.school_year != "2021-2022" and semester != "2"; 
+
+### Count subject of every student from class
+SELECT c.id,c.code,i.name
+from course_table c,enroll_table e,instructor_table i
+where c.id = e.course_id and e.user_id = i.id and c.code like "%CS105%";
