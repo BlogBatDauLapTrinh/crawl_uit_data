@@ -110,3 +110,5 @@ Mình cũng có chuẩn bị một số câu lệnh SQL để truy vấn trong f
 Và trên đây mình đã hướng dẫn bạn crawl dữ liệu môn học và dữ liệu sinh viên của UIT bằng cách sử dụng Selenium và BeatutifulSoup cũng như sử dụng SQLite để lưu trữ kết quả.
 
 Bạn có thể làm gì với đống dữ liệu này? Như mình đã nói phía trên thì bạn có thể sử dụng để xem thông tin của các sinh viên khác ví dụ như tên, email, ảnh, số lượng môn học, các môn học mà giảng viên đã dạy, các môn học nào có tỉ lệ học lại lớn, môn học nào chỉ xuất hiện 2 kỳ 1 lần để bạn đăng ký môn học cho thuận tiện...
+
+Link Github để của source code [tại đây](https://github.com/Huythanh0x/crawl_uit_data)
